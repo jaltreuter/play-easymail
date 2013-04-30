@@ -134,6 +134,10 @@ public class Mailer {
 			}
 		}
 
+        public static class Attachment {
+
+        }
+
 		private final String subject;
 		private final String[] recipients;
 		private String from;
@@ -141,6 +145,11 @@ public class Mailer {
 
 		public Mail(final String subject, final Body body,
 				final String[] recipients) {
+            this(subject, body, recipients, null);
+        }
+
+        public Mail(final String subject, final Body body,
+                    final String[] recipients, final Attachment[] attachments) {
 			if (subject == null || subject.trim().isEmpty()) {
 				throw new RuntimeException("Subject must not be null or empty");
 			}

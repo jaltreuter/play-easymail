@@ -6,3 +6,5 @@ samples/play-easymail-usage/.target
 .project
 code/bin
 samples/play-easymail-usage/bin
+*.idea
+*.iml
